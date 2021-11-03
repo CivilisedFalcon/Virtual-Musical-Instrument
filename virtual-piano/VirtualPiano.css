@@ -18,6 +18,7 @@ body {
     line-height: 300px;
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
+    Border-radius:8px;
 }
 
 .black-keys kbd {
@@ -33,6 +34,7 @@ body {
     font-family: 'Dancing Script', cursive;
     font-size: 18px;
     color: white;
+    Border-radius:8px;
 }
 
 
@@ -42,4 +44,12 @@ body {
 
 #E_key + #T_key {
     margin-left: 88px;
+}
+.black-keys kbd:hover {
+    background-color: #3B3B3B;
+}
+
+
+.white-keys kbd:hover {
+    background-color: #E8E6E6;
 }
