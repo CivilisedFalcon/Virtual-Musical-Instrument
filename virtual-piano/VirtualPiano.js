@@ -1,84 +1,43 @@
-/*This is just a very basic code.
-So if you're an advanced coder, it may not be fancy! 
-I have not documented it. 
-But I will Document it later.*/
-document.addEventListener("keydown", function (event) {
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="VirtualPiano.css">
+</head>
+<body>
+  <input id="output" placeholder="Music Notes" type="text" readonly value="">
+  <input type="button" value="Clear"  id="clr" >
+  <input type="button" value="Save"  id="save" >
 
-    if (event.code == "KeyA") {
-        console.log("The 'A' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/A.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyS") {
-        console.log("The 'S' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/S.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyD") {
-        console.log("The 'D' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/D.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyF") {
-        console.log("The 'F' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/F.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyG") {
-        console.log("The 'G' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/G.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyH") {
-        console.log("The 'H' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/H.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyJ") {
-        console.log("The 'J' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/J.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyW") {
-        console.log("The 'W' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/W.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyE") {
-        console.log("The 'E' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/E.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyT") {
-        console.log("The 'T' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/T.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyY") {
-        console.log("The 'Y' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/Y.mp3";
-        audio.play();
-    }
-    else if (event.code == "KeyU") {
-        console.log("The 'U' key is pressed.");
-        let audio = document.createElement("AUDIO");
-        audio.src = "Tune/U.mp3";
-        audio.play();
-    }
-    else {
-        console.log("Warning");
-        alert('I have not made a handler for this key yet :(')
-    }
-});
 
+    <div class="container">
+        <div class="container1 white-keys">
+            <kbd>A</kbd>
+            <kbd>S</kbd>
+            <kbd>D</kbd>
+            <kbd>F</kbd>
+            <kbd>G</kbd>
+            <kbd>H</kbd>
+            <kbd>J</kbd>
+        </div>
+        <div class="black-keys">
+            <kbd id="W_key">W</kbd>
+            <kbd id="E_key">E</kbd>
+            <kbd id="T_key">T</kbd>
+            <kbd id="Y_key">Y</kbd>
+            <kbd id="U_key">U</kbd>
+        </div>
+    </div class="drum-keys">
+     <kbd id="Z_key">Z</kbd>
+     <kbd id="X_key">X</kbd>
+     <kbd id="C_key">C</kbd>
+     <kbd id="V_key">V</kbd>
+     <kbd id="B_key">B</kbd>
+     <kbd id="N_key">N</kbd>
+     <kbd id="M_key">M</kbd>
+    <div>
+    </div>
+<script src="VirtualPiano.js"></script>
+</body>
+</html>
