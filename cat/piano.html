@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="piano_style.css">
+</head>
+<body>
+
+
+<?php include("nav.html")?>
+
+    <div class="band">
+    <a href="piano.html"><button class="button" style="vertical-align:middle"><span>Piano </span></button></a>
+    <a href="drums.html"><button class="button" style="vertical-align:middle"><span>Drums </span></button></a>
+
+    </div>
+    <div class="container">
+        <div class="container1 white-keys">
+            <kbd>A</kbd>
+            <kbd>S</kbd>
+            <kbd>D</kbd>
+            <kbd>F</kbd>
+            <kbd>G</kbd>
+            <kbd>H</kbd>
+            <kbd>J</kbd>
+        </div>
+        <div class="black-keys">
+            <kbd id="W_key">W</kbd>
+            <kbd id="E_key">E</kbd>
+            <kbd id="T_key">T</kbd>
+            <kbd id="Y_key">Y</kbd>
+            <kbd id="U_key">U</kbd>
+        </div>
+    </div>
+<script src="piano_js.js"></script>
+
+<?php include("footer.html")?>
+</body>
+</html> 

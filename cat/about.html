@@ -1,0 +1,111 @@
+<html>
+<head>
+
+<title>BEAThoven</title>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="about_style.css" type="text/css">
+
+<meta charset="UTF-8">
+<name="author" content="Catarina Pontes">
+
+</head>
+
+<body>
+
+<?php include("nav.html")?>
+<div class="header">
+
+</div>
+<div class="wrapper">
+    <h1>Meet the Team</h1>
+    <div class="our_team">
+        <div class="team_member">
+          <div class="member_img">
+             <img src="img/cat.png" alt="our_team">
+             <a href="https://www.linkedin.com/in/catarina-pontes-739773201/"> <div class="social_media">
+               <div class="linkedin"><img src="img/linkedin.png" style="width:40px;height:40px;"></div>
+             </div></a>
+          </div>
+          <h3>catarina pontes</h3>
+          <span>Responsable mainly for CSS</span>
+          <p>text here...</p>
+        </div>
+        <div class="team_member">
+           <div class="member_img">
+           	<img src="img/nicole.png" alt="our_team">
+           	<a href="https://www.linkedin.com/in/catarina-pontes-739773201/"> <div class="social_media">
+                 <div class="linkedin"><img src="img/linkedin.png" style="width:40px;height:40px;"></div>
+             </div></a>
+          </div>
+          <h3>name</h3>
+          <span>position</span>
+          <p>text here...</p>
+      </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="img/arijit.png" alt="our_team">
+             <a href="https://www.linkedin.com/in/catarina-pontes-739773201/"> <div class="social_media">
+             <div class="linkedin"><img src="img/linkedin.png" style="width:40px;height:40px;"></div>
+           </div></a>
+          </div>
+          <h3>name</h3>
+          <span>position</span>
+          <p>text here...</p>
+      </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="img/adit.png" alt="our_team">
+             <a href="https://www.linkedin.com/in/catarina-pontes-739773201/"> <div class="social_media">
+             <div class="linkedin"><img src="img/linkedin.png" style="width:40px;height:40px;"></div>
+           </div></a>
+          </div>
+          <h3>Name</h3>
+          <span>position</span>
+          <p>text here...</p>
+      </div>  
+    </div>
+</div>
+
+
+<button onclick="topFunction()" id="myBtn" title="Gototop"><img src="img/top.png" style="width:30px;"></button>
+
+
+<script>
+
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+<?php include('footer.html')?>
+
+
+
+
+
+
+</body>
+
+</html>
+
