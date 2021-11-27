@@ -1,27 +1,27 @@
-
-
 <html>
 	<style>
 		* {
 			box-sizing: border-box;
 		}
-		
+
 		button{
 			background-color: ;
 		}
-		
+
+		/* round corner background for "select avatar" section */
 		#rcorners {
 		  border-radius: 25px;
 		  background: #D1F2EB;
-		  padding: 50px;  
+		  padding: 50px;
 		}
-		
+
+		/* round corner background for "My Music" section */
 		#rcorners2 {
 		  border-radius: 25px;
 		  background: #D6EAF8;
-		  padding: 50px;  
+		  padding: 50px;
 		}
-		
+
 		/* Create "cards" for home page, responsive on mouse hover*/
 		.polaroid {
 		  /*width: 350px;*/
@@ -35,28 +35,12 @@
 		  padding: 10px 20px;
 		  color: black;
 		}
-		
+
 		/* Remove underline from links */
 		a:link {
 		  text-decoration: none;
 		}
-		
-		/* Divide page into "main section" on left and "side section" on the right
-		.row {
-			display: flex;
-			flex-wrap: wrap;
-		}
-		
-		.main {
-			flex: 70%; 
-			padding: 55px; 
-		}
-		
-		.side {
-			flex: 30%; 
-			padding: 50px;
-		}
-		
+
 		/* Slider for images */
 		#scroll {
 			width:600px;
@@ -76,7 +60,7 @@
 			margin:15px;
 			text-align:center;
 			float:left;
-			display:inline;           
+			display:inline;
 		}
 		#scroll img {
 			border:0;
@@ -93,102 +77,133 @@
 			color:#000;
 		}
 		#scroll a:active, #scroll a:focus, #scroll a:hover {
-			color:#FFF;
+			color:#2980B9;
 		}
 		#scroll span {
-			padding:5px 0 0;
-			
+			padding:10px;
 		}
-		
+
 		/* Scrollable list of user's songs */
 		nav ol{
 			height:200px;
 			width:600px;
 		}
 		nav ol{
-			overflow:hidden; 
+			overflow:hidden;
 			overflow-y:scroll;
 		}
-		
+
+		/* left side of page (user's profile pic) */
+		.left{
+			display: inline-block;
+			vertical-align:top;
+			padding-top: 50px;
+			border-radius: 25px;
+		}
+
 	</style>
-	
+
 	<head>
 		<link rel ="stylesheet" href="stylesheet.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8"><title>My Profile</title>
 		<link rel="icon" href="http://localhost/WebD/kyungpook/virtualinstrument/avatar1.jpg">
+
+		<!-- * Script to preview user's image depending on their selection *-->
+		<script>
+
+		function savePic(a) {
+			document.getElementById("avatar").src=a;
+		}
+
+		</script>
+
 	</head>
-	
+
 	<body style="padding:20px">
 		<h2>Welcome, $username!</h2>
-		
-			<div class="row"> <!-- "row" holds the main and side sections on the same horizontal line -->
-				<div style="display: inline-block">
-				
-					<div style="display: inline-block">
-						<div class="main">	
+		<h2>$username's Profile</h2>
+
+			<div class="row">
+				<div style="display: inline-block"> <!-- "inline block" holds the main and side sections on the same horizontal line -->
+
+					<!-- left hand side of the page -->
+					<div class="left">
 							<!--Create a card of the user's profile picture and name in "main section"-->
-							<div class="polaroid" style="width: 400px;">
-								<img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar1.jpg">             <!-- <<<<<<<<<<<<<<<<<ADD AVATAR VAR<<<<<<<<<<<-->
+							<div class="polaroid" style="width: 400px; ">
+								<img id="avatar" src="avatar1.jpg">             <!-- <<<<<<<<<<<<<<<<<ADD AVATAR VAR<<<<<<<<<<<-->
 								<div class="cardtext">
 									<p>$username</p>
 								</div>
 							</div>
-						</div>
 					</div>
-					
+
 					<!-- the right hand side of the page-->
 					<div style="display: inline-block">
-						<div class="side" style="padding:50px">
-						
-							<!-- Profile pic selection -->
+						<div style="padding:50px">
+
+							<!-- Profile pic selection: an unordered list of buttons with images inside -->
 							<div id="rcorners">
-								<p>Select your Avatar</p>
+								<h3>Select your Avatar</h3>
 								<div id="scroll">
 								<ul>
 									<div class="selector">
-									<li><a href="#"><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar1.jpg"><span>Swag</span></a></li>
-									<li><a href="#"><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar2.jpg"><span>Pink</span></a></li>
-									<li><a href="#"><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar3.jpg"><span>Frog</span></a></li>
-									<li><a href="#"><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar4.jpg"><span>Crown</span></a></li>
-									<li><a href="#"><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar5.jpg"><span>Chain</span></a></li>
-									<li><a href="#"><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar6.jpg"><span>Fairy</span></a></li>
+									<li><button onclick='savePic("avatar1.jpg");'><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar1.jpg"><span>Swag</span></button></li>
+									<li><button onclick='savePic("avatar2.jpg");'><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar2.jpg"><span>Pink</span></button></li>
+									<li><button onclick='savePic("avatar7.jpg");'><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar7.jpg"><span>Blue</span></button></li>
+									<li><button onclick='savePic("avatar3.jpg");'><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar3.jpg"><span>Frog</span></button></li>
+									<li><button onclick='savePic("avatar4.jpg");'><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar4.jpg"><span>Crown</span></button></li>
+									<li><button onclick='savePic("avatar5.jpg");'><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar5.jpg"><span>Chain</span></button></li>
+									<li><button onclick='savePic("avatar6.jpg");'><img src="http://localhost/WebD/kyungpook/virtualinstrument/avatar6.jpg"><span>Fairy</span></button></li>
 									</div>
 								</ul>
 								</div>
+								<br>
+
+								<button type="button" onclick="">Save</button>
 							</div>
-							
+
 							<br>
 							<hr>
 							<br>
-							
+
 							<!-- Music Library Display -->
 							<div id="rcorners2">
 								<nav>
-									<p>My Music</p>
+									<h3>My Music</h3>
 									<ol>
-										<li>"SONG NAME1"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME2"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME3"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME4"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME5"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME6"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME7"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME8"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME9"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME10"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME11"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
-										<li>"SONG NAME12"  <button type="submit">Play</button> <button type="submit">Delete</button></li>
+
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+										<li>"SONG NAME" <button type="submit" style="float:right;"> Delete </button><button type="submit" style="float:right;"> Play </button></li>
+										<hr>
+
 									</ol>
 								</nav>
 							</div>
-							
+
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
-		
-	</body>	
-	
+
+	</body>
+
 </html>
