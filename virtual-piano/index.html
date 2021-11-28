@@ -6,10 +6,16 @@
     <link rel="stylesheet" href="VirtualPiano.css">
 </head>
 <body>
-  <input id="output" placeholder="Music Notes" type="text" readonly value="">
-  <input type="button" value="Clear"  id="clr" >
-  <input type="button" value="Save"  id="save" >
+    <div>
+    <form action="submit.cgi" method="get">
+        <input id="output" name="outputTune" placeholder="Music Notes" type="text" readonly value="">
+        <input type="submit" value="Submit" id="save">
+        <input type="button" value="Play"  id="play" >
+        <input type="reset" value="Clear" id="clr">
+    </form>
+</div>
 
+     
 
     <div class="container">
         <div class="container1 white-keys">
@@ -38,6 +44,9 @@
      <kbd id="M_key">M</kbd>
     <div>
     </div>
+
 <script src="VirtualPiano.js"></script>
+
+
 </body>
 </html>
