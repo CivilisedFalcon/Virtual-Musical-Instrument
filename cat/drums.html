@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="VirtualPiano.css">
+</head>
+<body>
+    <a href="piano.html"><button class="button" style="vertical-align:middle"><span>Piano </span></button></a>
+  <input id="output" placeholder="Music Notes" type="text" readonly value="">
+  <input type="button" value="Clear"  id="clr" >
+  <input type="button" value="Save"  id="save" >
+
+
+    <div class="container">
+        <div class="container1 white-keys">
+            <kbd>A</kbd>
+            <kbd>S</kbd>
+            <kbd>D</kbd>
+            <kbd>F</kbd>
+            <kbd>G</kbd>
+            <kbd>H</kbd>
+            <kbd>J</kbd>
+        </div>
+        <div class="black-keys">
+            <kbd id="W_key">W</kbd>
+            <kbd id="E_key">E</kbd>
+            <kbd id="T_key">T</kbd>
+            <kbd id="Y_key">Y</kbd>
+            <kbd id="U_key">U</kbd>
+        </div>
+    </div class="drum-keys">
+     <kbd id="Z_key">Z</kbd>
+     <kbd id="X_key">X</kbd>
+     <kbd id="C_key">C</kbd>
+     <kbd id="V_key">V</kbd>
+     <kbd id="B_key">B</kbd>
+     <kbd id="N_key">N</kbd>
+     <kbd id="M_key">M</kbd>
+    <div>
+    </div>
+<script src="VirtualPiano.js"></script>
+</body>
+</html>

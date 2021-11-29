@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Top Charts</title>
+    <link rel="stylesheet" href="top_charts_style.css">
+</head>
+
+
+<body>
+	<div class="header"><h1>Top Charts</h1></div>
+	<form action="top-charts.cgi" method="get">
+		<table>
+		<tr class="title">
+    		<th  class="col1">Tune</th>
+    		<th  class="col2">Creator</th>
+    		<th  class="col3">Score</th>
+		</tr>
+		<tr>
+		<td class="col1"><img src="img/play1.png" class="play_icon">$i $tune_name</td>
+
+
+		<td class="col2">$tune_creator</td>
+
+
+
+		<td class="col3"><button type="submit" value="$tune_id" class="upvote"><img src="img/thumb.png" class="up"></button> <button type="submit" value="$tune_id" class="downvote"><img src="img/thumb.png" class="down"></button> $tune_score</td>
+		</tr>
+
+	</form>
+		</table>
+</body>
+</html>
