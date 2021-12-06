@@ -1,4 +1,4 @@
-#!"C:\xampp\perl\bin\perl.exe"
+#!/usr/bin/perl
 
 use warnings;
 use CGI qw(:standard);
@@ -166,8 +166,3 @@ print <<ENDTAG;
 
 ENDTAG
 
-
-# make radio buttons
-# and put images in place of text
-
-#<button onclick="document.getElementById('avatar').src='picBulbon.jpg' "> </button>
