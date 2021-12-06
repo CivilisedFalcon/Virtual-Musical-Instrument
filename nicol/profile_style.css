@@ -42,7 +42,7 @@ body{
 /* round corner background card for "My Music" section */
 #rcorners2 {
   border-radius: 25px;
-  background: #D6EAF8;
+  background: #FADBD8;
   padding: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -50,7 +50,7 @@ body{
 /* round corner background card for "Top liked" section */
 #rcorners3 {
   border-radius: 25px;
-  background: #F5B7B1;
+  background: #D6EAF8;
   padding: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
