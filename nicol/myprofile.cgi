@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!"C:\xampp\perl\bin\perl.exe"
 
 use warnings;
 use CGI qw(:standard);
@@ -8,6 +8,7 @@ print header();
 
 $username="Pink";
 $topsong ="lovesong";
+$avatar = "avatar1.jpg";
 
 #Read file to find user's avatar (what to display?)
 $file="savedAvatars.out";
@@ -58,7 +59,7 @@ print <<ENDTAG;
 					<div class="left">
 							<!--Create a card of the user's profile picture and name in "main section"-->
 							<div class="polaroid" style="width: 400px; ">
-								<img id="avatar" src="avatar1.jpg">            <!-- <<<<<<<<<<<<<<<<<ADD AVATAR VAR<<<<<<<<<<<-->
+								<img id="avatar" src="$avatar">
 								<div class="cardtext">
 									<h3>$username</h3>
 								</div>
@@ -67,7 +68,11 @@ print <<ENDTAG;
 							<!-- Top Liked section -->
 							<div id="rcorners3">
 								<h3 style='text-align: center;'> $username 's Top Tune: </h3>
-
+								<br>
+								<img src="no1.png" style='display:block; margin: auto;'>
+								<br>
+								<h4 style='text-align: center;'>$topsong</h4>
+								<br>
 							</div>
 					</div>
 
@@ -122,7 +127,7 @@ print <<ENDTAG;
 							<br>
 							<hr>
 							<br>
-							
+
 							<!-- Music Library Display -->
 							<div id="rcorners2">
 								<nav>
@@ -165,4 +170,3 @@ print <<ENDTAG;
 </html>
 
 ENDTAG
-
