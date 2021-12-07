@@ -1,6 +1,6 @@
 document.addEventListener("keydown", function (event) {
 
-    let kcode= String.fromCharCode(event.which);piano.
+    let kcode= String.fromCharCode(event.which);
 	//console.log("code=",kcode);
 
   if (kcode == "Z" || kcode == "X" ||kcode == "C" ||kcode == "V" ||kcode == "B" ||kcode == "N" ||kcode == "M")
